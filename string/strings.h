@@ -1,0 +1,12 @@
+void string_copy(char *source, char *destenation);
+void string_scan(char *str);
+void string_print(char *str);
+void string_reverse(char *str, char start, char end);
+int string_compare(char *str1, char *str2);
+int string_length(char* str);
+void int_to_string(int num, char *str);
+int string_to_int(char *str);
+void float_to_string(float num, char reslution, char *str);
+char *int_to_Hex(int num);
+char char_to_lower(char x);
+char char_to_upper(char x);
