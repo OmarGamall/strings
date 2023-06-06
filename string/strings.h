@@ -10,3 +10,5 @@ void float_to_string(float num, char reslution, char *str);
 char *int_to_Hex(int num);
 char char_to_lower(char x);
 char char_to_upper(char x);
+int removeSpaces(char *str);
+void str_erase_char(char* str, unsigned int pos, unsigned int n);

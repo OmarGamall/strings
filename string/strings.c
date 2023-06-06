@@ -240,3 +240,49 @@ char *int_to_Hex(int num)
     string_reverse(HexStr, 0, i - 1);
     return HexStr;
 }
+
+/*function used to remove spaces from a string and returns the new string length*/
+/*O(n) time space*/
+int removeSpaces(char *str)
+{
+    int i = 0; // pointer to next position where a non-space character should be copied
+    int j = 0; // pointer to the current character being examined
+    int c = 0; // index of the current character in the string
+    while (str[c])
+    {
+        if (str[c] == ' ')
+        {
+            j++; // skip space character
+        }
+        else
+        {
+            str[i] = str[j];
+            i++;
+            j++;
+        }
+        c++;
+    }
+    // insert NULL character
+    str[i] = '\0';
+    return i; // new length
+}
+
+/*Function used to erase a character from a string
+@Inputs:
+  1-str:   pointer to the string
+  2-pos:   position of the character (start from index 0)
+  3-n:     Number of characters to be deleted
+*/
+void str_erase_char(char* str, unsigned int pos, unsigned int n)
+{
+    int i, j;
+    for (i = 0, j = 0; str[i] != '\0'; i++, j++)
+    {
+        if (i == pos)
+        {
+            i = i + n;
+        }
+        str[j] = str[i];
+    }
+    str[j] = 0; // insert Null character
+}
