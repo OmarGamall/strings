@@ -12,3 +12,4 @@ char char_to_lower(char x);
 char char_to_upper(char x);
 int removeSpaces(char *str);
 void str_erase_char(char* str, unsigned int pos, unsigned int n);
+int strStr(char *haystack, char *needle);

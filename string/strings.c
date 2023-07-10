@@ -286,3 +286,29 @@ void str_erase_char(char* str, unsigned int pos, unsigned int n)
     }
     str[j] = 0; // insert Null character
 }
+int arr[] = {2,5,3,2};
+
+/*return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.*/
+int strStr(char *haystack, char *needle)
+{
+    const int n = strlen(haystack);
+    const int m = strlen(needle);
+    int i = 0;
+    int j = 0;
+    for (i = 0; i < (n - m + 1); i++)
+    {
+        for (j = 0; needle[j]; j++)
+        {
+            if (haystack[i + j] != needle[j])
+            {
+                break; // break the inner loop
+            }
+        }
+        if (j == m)
+        {
+            return i;
+        }
+    }
+    return -1;
+}
+
